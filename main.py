@@ -127,7 +127,7 @@ if __name__ == "__main__":
         'Pomodoro', 'Short Pause', 'Long Pause', 'Pause Timer', 'Hide Time'))
     pomodoro_timer = rumps.Timer(a, 1)
 
-    app.icon = 'icon.png'
+    app.icon = 'icons/icon.png'
     app.run()
     # with keyboard.GlobalHotKeys({
     #     '<alt>': on_activate_p,
