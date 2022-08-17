@@ -3,6 +3,17 @@ import time
 import datetime
 # from pynput import keyboard
 
+########
+########
+# TODO
+# + Icon should be black for dark mode
+# + unhide while paused should show time
+# + when hidden and new session starts, bzzz! should go away
+# + clicking on notification should start new timer
+# + custom time
+# + show in which pomodoro your're in (long break resets)
+########
+########
 rumps.debug_mode(True)
 
 current_mode = ''
@@ -10,13 +21,14 @@ current_mode = ''
 pomodoro_minutes = 25
 pomodoro_seconds = 0
 
-long_break_minutes = 10
+long_break_minutes = 15
 long_break_seconds = 0
 
 short_break_minutes = 5
 short_break_seconds = 0
 
 time_hidden = False
+notification_enabled = False
 
 m = 0
 s = 0
@@ -62,6 +74,11 @@ def start_timer(_):
 def end_timer():
     pomodoro_timer.stop()
     app.title = "bzzz!"
+    if notification_enabled:
+        if current_mode == 'pomodoro':
+            rumps.notification("bzzz!", "Time for a break :)", "")
+        else:
+            rumps.notification("bzzz!", "", "")
 
 
 @rumps.clicked('Pomodoro', key="p")
@@ -117,6 +134,13 @@ def change_timer_visibility(_):
         start_long_pause(1)
 
 
+@rumps.clicked('Notifications', key="n")
+def switch_notifications(_):
+    global notification_enabled
+    notification_enabled = not notification_enabled
+    app.menu['Notifications'].state = not app.menu['Notifications'].state
+
+
 def resume_timer(_):
     app.menu['Stop Timer'].title = "Stop Timer"
     app.menu['Stop Timer'].set_callback(stop_timer)
@@ -125,7 +149,7 @@ def resume_timer(_):
 
 if __name__ == "__main__":
     app = rumps.App('pom', menu=(  # 'Change Timer',
-        'Pomodoro', 'Short Pause', 'Long Pause', None, 'Hide Time', None, 'Stop Timer', 'Reset Timer'))
+        'Pomodoro', 'Short Pause', 'Long Pause', None, 'Hide Time', "Notifications", None, 'Stop Timer', 'Reset Timer'))
     pomodoro_timer = rumps.Timer(a, 1)
 
     app.icon = 'icons/icon.png'
