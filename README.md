@@ -8,7 +8,7 @@ You can start, stop or reset Pelidoro right from your menubar.
 
 ![Screenshot of Pelidoro in action.](doc/images/menubar_menu.png)
 
-If you find yourself constantly watching the time, Timebar also lets you discretely track time in the background.
+If you find yourself constantly watching the time, Pelidoro also lets you discretely track time in the background.
 
 ![Screenshot of Pelidoro in action.](doc/images/menubar_hidden.png)
 
