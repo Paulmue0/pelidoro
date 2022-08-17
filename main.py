@@ -6,7 +6,7 @@ import datetime
 ########
 ########
 # TODO
-# + Icon should be black for dark mode
+# + Icon should be white for dark mode
 # + unhide while paused should show time
 # + when hidden and new session starts, bzzz! should go away
 # + clicking on notification should start new timer
