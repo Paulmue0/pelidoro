@@ -29,11 +29,12 @@ minute breaks and 15 minute breaks following the completion of four work periods
 
 ### Prerequisites
 
-[Rumps] is used to create the graphical menubar. py2app is used to create a standalone OS X application.
+[Rumps] is used to create the interactive menubar-icon. [py2app] is used to create a standalone OS X application.
 
     pip install rumps py2app
 
 [Rumps]: https://github.com/jaredks/rumps
+[py2app]: https://github.com/ronaldoussoren/py2app
 
 ### Create application
 
