@@ -26,7 +26,12 @@ minute breaks and 15 minute breaks following the completion of four work periods
 - [ ] Save user settings locally
 
 ## Installation
+## Download prebuilt application
+The simplest to install is to download the application prebuilt from the official [website]
 
+
+[website]: https://app.paulpelikan.de
+## Alternatively you can build the app by yourself:
 ### Prerequisites
 
 [Rumps] is used to create the interactive menubar-icon. [py2app] is used to create a standalone OS X application.
@@ -43,4 +48,5 @@ You can create a standalone OS X application with py2app:
     python3 setup.py py2app
 
 After this an application will be available under `dist/`
+
 
