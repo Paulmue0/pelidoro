@@ -27,7 +27,7 @@ minute breaks and 15 minute breaks following the completion of four work periods
 
 ## Installation
 ## Download prebuilt application
-The simplest to install is to download the application prebuilt from the official [website]
+The simplest way to install pelidoro is to download the application prebuilt from the official [website]
 
 
 [website]: https://app.paulpelikan.de
