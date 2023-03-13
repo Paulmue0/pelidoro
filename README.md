@@ -24,6 +24,10 @@ minute breaks and 15 minute breaks following the completion of four work periods
 - [x] Notifies you to take breaks
 - [ ] Create custom intervals
 - [ ] Save user settings locally
+- [ ] providing crossplatform accessibility by rebuilding Pelidoro in [tauri]
+
+[tauri]: https://tauri.app/
+
 
 ## Installation
 ## Download prebuilt application
